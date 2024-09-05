@@ -1,0 +1,107 @@
+body {
+  text-align: center;
+  background-color: hsl(211, 57%, 7%);
+  margin: 0;
+  padding: 0;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #FEF2BF;
+}
+
+.container {
+  position: relative;
+  width: 400px; /* Default size */
+  height: 400px; /* Default size */
+  margin: auto;
+}
+
+.btn {
+  position: absolute;
+  width: 50%; /* Each button will take half of the container's width */
+  height: 50%; /* Each button will take half of the container's height */
+  border: 10px solid black;
+  border-radius: 0; /* Reset default round corners */
+  cursor: pointer;
+}
+
+/* Position each button to form quarters of a circle */
+#green {
+  background-color: green;
+  top: -30px;
+  left: -30px;
+  border-top-left-radius: 100%; /* Create quarter circle */
+}
+
+#red {
+  background-color: red;
+  top: -30px;
+  right: -30px;
+  border-top-right-radius: 100%; /* Create quarter circle */
+}
+
+#yellow {
+  background-color: yellow;
+  bottom: -30px;
+  left: -30px;
+  border-bottom-left-radius: 100%; /* Create quarter circle */
+}
+
+#blue {
+  background-color: blue;
+  bottom: -30px;
+  right: -30px;
+  border-bottom-right-radius: 100%; /* Create quarter circle */
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+  #level-title {
+    font-size: 2rem; /* Smaller font for smaller screens */
+    margin: 10% 5%; /* Adjust margins for better spacing */
+  }
+
+  .container {
+    width: 250px; /* Reduce size for mobile */
+    height: 250px; /* Reduce size for mobile */
+  }
+
+  .btn {
+    width: 50%; /* Maintain relative size */
+    height: 50%; /* Maintain relative size */
+    border: 5px solid black; /* Thinner borders on mobile */
+  }
+
+  #green {
+    top: -20px;
+    left: -20px;
+  }
+
+  #red {
+    top: -20px;
+    right: -20px;
+  }
+
+  #yellow {
+    bottom: -20px;
+    left: -20px;
+  }
+
+  #blue {
+    bottom: -20px;
+    right: -20px;
+  }
+}
